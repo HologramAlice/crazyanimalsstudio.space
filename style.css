@@ -418,7 +418,7 @@ nav {
     align-items: center;
 }
 
-.featured-info {}
+/*.featured-info {} */
 
 .featured-badge {
     display: inline-block;
@@ -629,8 +629,6 @@ nav {
     gap: 80px;
     align-items: start;
 }
-
-.join-info {}
 
 .join-info p {
     font-size: 16px;
