@@ -1,4 +1,4 @@
-/* ─── i18n ─────────────────────────────────── */
+
 const translations = {
     ru: {
         'nav-projects':          'Проекты',
@@ -25,11 +25,6 @@ const translations = {
         'art-pending-short':     '// арт не готов',
         'bc-final':              '// blood_candy · финал',
         'join-tag-word':         'вступить',
-        'join-desc':             'Ищем: разработчиков, художников, нарративщиков, звуковых дизайнеров.<br>// Стек прога: Unity 6 · Git &amp; GitLab · C#<br>// Стек художника: Aseprite · Blender',
-        'join-perk-1':           'реальные проекты с первого дня',
-        'join-perk-2':           'нормальный git-workflow',
-        'join-perk-4':           'долгосрочно · 長期的',
-        'join-placeholder':      'Чем занимаешься. Что умеешь. Зачем сюда.',
         'footer-copy':           '© 2026 · Санкт-Петербург',
         'stat-many':             'много',
         'badge-active':          'АКТИВЕН',
@@ -60,10 +55,6 @@ const translations = {
         'art-pending-short':     '// art not ready',
         'bc-final':              '// blood_candy · final',
         'join-tag-word':         'join',
-        'join-desc':             'Looking for: developers, artists, narrative designers, sound designers.<br>// Dev stack: Unity 6 · Git &amp; GitLab · C#<br>// Art stack: Aseprite · Blender',
-        'join-perk-1':           'real projects from day one',
-        'join-perk-2':           'proper git-workflow',
-        'join-perk-4':           'long-term · 長期的',
         'join-placeholder':      'What you do. What you know. Why here.',
         'footer-copy':           '© 2026 · Saint Petersburg',
         'stat-many':             'a lot',
@@ -75,7 +66,6 @@ const translations = {
 
 let currentLang = 'en';
 
-/* ─── Scramble effect ────────────────────────── */
 const SCRAMBLE_CHARS = 'АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЫЭЮЯabcdefghijklmnopqrstuvwxyz0123456789#@!_·/><';
 
 function scrambleElement(el, targetText, duration = 420) {
@@ -140,7 +130,6 @@ function setLang(lang) {
     });
 }
 
-/* ─── Theme ──────────────────────────────────── */
 function toggleTheme() {
     const isDark = document.body.getAttribute('data-theme') === 'dark';
     const next = isDark ? 'light' : 'dark';
@@ -154,7 +143,6 @@ function applyTheme(theme) {
     if (btn) btn.textContent = theme === 'dark' ? '◑' : '◐';
 }
 
-/* ─── Init ───────────────────────────────────── */
 (function init() {
     const savedLang = localStorage.getItem('cas-lang');
     setLang(savedLang || 'en');
@@ -163,7 +151,6 @@ function applyTheme(theme) {
     applyTheme(savedTheme);
 })();
 
-/* ─── 3D Tilt на карточках ───────────────────── */
 document.querySelectorAll('.media-card').forEach((card) => {
     const frame = card.querySelector('.media-card-frame');
     let entered = false;
@@ -194,7 +181,6 @@ document.querySelectorAll('.media-card').forEach((card) => {
     });
 });
 
-/* ─── Scroll reveal ──────────────────────────── */
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
         if (e.isIntersecting) {
@@ -232,7 +218,6 @@ document.querySelectorAll('.role-bubble').forEach((el, i) => {
     observer.observe(el);
 });
 
-/* ─── Счётчики в stats ───────────────────────── */
 const counterObs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
         if (!e.isIntersecting) return;
