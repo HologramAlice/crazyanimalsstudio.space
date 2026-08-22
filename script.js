@@ -175,7 +175,7 @@ function applyTheme(theme) {
     const savedLang = localStorage.getItem('cas-lang');
     setLang(savedLang || 'en');
 
-    const savedTheme = localStorage.getItem('cas-theme') || 'light';
+    const savedTheme = localStorage.getItem('cas-theme') || 'dark';
     applyTheme(savedTheme);
 })();
 
