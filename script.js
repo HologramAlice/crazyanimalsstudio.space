@@ -1,66 +1,94 @@
 
 const translations = {
     ru: {
+        
         'nav-projects':          'Проекты',
         'nav-about':             'О нас',
         'nav-join':              'Вступить',
+
+        
         'hero-tag':              'CAS_v1',
         'hero-sub':              'Небольшая инди-геймдев команда.',
         'hero-btn-projects':     '// Проекты',
+
+        
         'marquee-indie':         'инди-геймдев',
+
+        
         'tag-current-build':     '// 製作中 · текущая разработка',
         'active-badge':          '● 開発中 · ACTIVE',
         'btn-follow':            'следить ↗',
         'art-not-ready-featured':'// арт ещё не готов · 未定',
+        
+        
         'tag-about':             '// スタジオ · о студии',
-        'stat-games':            'выпущено игр',
-        'stat-ideas':            'идей',
+        'stat-games':            'в разработке',
         'stat-members':          'участников',
         'stat-engine':           'движок',
+        'stat-founder&coFounder':'Основатель и со-основатель',
+        
+        
         'roles-sub':             '自分たちのペースで · своим темпом',
+
+        
         'tag-all-projects':      '// 全プロジェクト · все проекты',
         'status-active':         '開発中 · В РАЗРАБОТКЕ',
+        'badge-active':          'АКТИВЕН',
         'status-ideas':          'アイデア · ИДЕИ',
+        'badge-idea':            'Идея',
         'art-pending':           '// арт не готов · 未定',
         'art-pending-short':     '// арт не готов',
-        'bc-final':              '// blood_candy · финал',
+
+        
         'join-tag-word':         'вступить',
+        
+        
         'footer-copy':           '© 2026 · Санкт-Петербург',
-        'stat-many':             'много',
-        'badge-active':          'АКТИВЕН',
-        'badge-idea':            'Идея',
     },
     en: {
+        
         'nav-projects':          'Projects',
         'nav-about':             'About',
         'nav-join':              'Join',
+
+        
         'hero-tag':              'CAS_v1',
         'hero-sub':              'Mini indie gamedev team.',
         'hero-btn-projects':     '// Projects',
+        
+        
         'marquee-indie':         'indie-gamedev',
+        
+        
         'tag-current-build':     '// 製作中 · current build',
         'active-badge':          '● 開発中 · ACTIVE',
         'btn-follow':            'follow ↗',
         'art-not-ready-featured':'// art not ready yet',
+        
+        
         'tag-about':             '// スタジオ · about',
-        'stat-games':            'games released',
-        'stat-ideas':            'ideas',
+        'stat-games':            'in development',
         'stat-members':          'members',
-        'stat-engine':           'engine',
+        'stat-basedIn':          'based in',
+        'stat-founders':         'founder & co-founder',
+        
+        
         'roles-sub':             '自分たちのペースで · at our own pace',
+        
+        
         'tag-all-projects':      '// 全プロジェクト · all projects',
         'status-active':         '開発中 · IN DEVELOPMENT',
+        'badge-active':          'ACTIVE',
         'status-ideas':          'アイデア · IDEAS',
+        'badge-idea':            'Idea',
         'art-pending':           '// art not ready · 未定',
         'art-pending-short':     '// art not ready',
-        'bc-final':              '// blood_candy · final',
+       
+        
         'join-tag-word':         'join',
-        'join-placeholder':      'What you do. What you know. Why here.',
+        
+        
         'footer-copy':           '© 2026 · Saint Petersburg',
-        'stat-many':             'a lot',
-        'role-writing':          'Screenwriting',
-        'badge-active':          'ACTIVE',
-        'badge-idea':            'Idea',
     }
 };
 
