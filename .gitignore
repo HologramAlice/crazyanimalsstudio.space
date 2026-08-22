@@ -1,5 +1,13 @@
+# Dependencies
 node_modules
+
+# IDE and utility script folders
 .vscode/
+scripts/
+
+# macOS/Windows system files
 .DS_Store
 Thumbs.db
+
+# Logs
 *.log

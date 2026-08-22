@@ -1,81 +1,99 @@
-/* ─── i18n ─────────────────────────────────── */
+
 const translations = {
     ru: {
+        
         'nav-projects':          'Проекты',
         'nav-about':             'О нас',
         'nav-join':              'Вступить',
+
+        
         'hero-tag':              'CAS_v1',
         'hero-sub':              'Небольшая инди-геймдев команда.',
         'hero-btn-projects':     '// Проекты',
+
+        
         'marquee-indie':         'инди-геймдев',
+
+        
         'tag-current-build':     '// 製作中 · текущая разработка',
         'active-badge':          '● 開発中 · ACTIVE',
         'btn-follow':            'следить ↗',
         'art-not-ready-featured':'// арт ещё не готов · 未定',
+        
+        
         'tag-about':             '// スタジオ · о студии',
-        'stat-games':            'выпущено игр',
-        'stat-ideas':            'идей',
+        'stat-games':            'в разработке',
         'stat-members':          'участников',
         'stat-engine':           'движок',
+        'stat-founder&coFounder':'Основатель и со-основатель',
+        
+        
         'roles-sub':             '自分たちのペースで · своим темпом',
+
+        
         'tag-all-projects':      '// 全プロジェクト · все проекты',
         'status-active':         '開発中 · В РАЗРАБОТКЕ',
+        'badge-active':          'АКТИВЕН',
         'status-ideas':          'アイデア · ИДЕИ',
+        'badge-idea':            'Идея',
         'art-pending':           '// арт не готов · 未定',
         'art-pending-short':     '// арт не готов',
-        'bc-final':              '// blood_candy · финал',
+
+        
         'join-tag-word':         'вступить',
-        'join-desc':             'Ищем: разработчиков, художников, нарративщиков, звуковых дизайнеров.<br>// Стек прога: Unity 6 · Git &amp; GitLab · C#<br>// Стек художника: Aseprite · Blender',
-        'join-perk-1':           'реальные проекты с первого дня',
-        'join-perk-2':           'нормальный git-workflow',
-        'join-perk-4':           'долгосрочно · 長期的',
-        'join-placeholder':      'Чем занимаешься. Что умеешь. Зачем сюда.',
+        
+        
         'footer-copy':           '© 2026 · Санкт-Петербург',
-        'stat-many':             'много',
-        'badge-active':          'АКТИВЕН',
-        'badge-idea':            'Идея',
     },
     en: {
+        
         'nav-projects':          'Projects',
         'nav-about':             'About',
         'nav-join':              'Join',
+
+        
         'hero-tag':              'CAS_v1',
         'hero-sub':              'Mini indie gamedev team.',
         'hero-btn-projects':     '// Projects',
+        
+        
         'marquee-indie':         'indie-gamedev',
+        
+        
         'tag-current-build':     '// 製作中 · current build',
         'active-badge':          '● 開発中 · ACTIVE',
         'btn-follow':            'follow ↗',
         'art-not-ready-featured':'// art not ready yet',
+        
+        
         'tag-about':             '// スタジオ · about',
-        'stat-games':            'games released',
-        'stat-ideas':            'ideas',
+        'stat-games':            'in development',
         'stat-members':          'members',
-        'stat-engine':           'engine',
+        'stat-basedIn':          'based in',
+        'stat-founders':         'founder & co-founder',
+        
+        
         'roles-sub':             '自分たちのペースで · at our own pace',
+        
+        
         'tag-all-projects':      '// 全プロジェクト · all projects',
         'status-active':         '開発中 · IN DEVELOPMENT',
+        'badge-active':          'ACTIVE',
         'status-ideas':          'アイデア · IDEAS',
+        'badge-idea':            'Idea',
         'art-pending':           '// art not ready · 未定',
         'art-pending-short':     '// art not ready',
-        'bc-final':              '// blood_candy · final',
+       
+        
         'join-tag-word':         'join',
-        'join-desc':             'Looking for: developers, artists, narrative designers, sound designers.<br>// Dev stack: Unity 6 · Git &amp; GitLab · C#<br>// Art stack: Aseprite · Blender',
-        'join-perk-1':           'real projects from day one',
-        'join-perk-2':           'proper git-workflow',
-        'join-perk-4':           'long-term · 長期的',
-        'join-placeholder':      'What you do. What you know. Why here.',
+        
+        
         'footer-copy':           '© 2026 · Saint Petersburg',
-        'stat-many':             'a lot',
-        'role-writing':          'Screenwriting',
-        'badge-active':          'ACTIVE',
-        'badge-idea':            'Idea',
     }
 };
 
 let currentLang = 'en';
 
-/* ─── Scramble effect ────────────────────────── */
 const SCRAMBLE_CHARS = 'АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЫЭЮЯabcdefghijklmnopqrstuvwxyz0123456789#@!_·/><';
 
 function scrambleElement(el, targetText, duration = 420) {
@@ -140,7 +158,6 @@ function setLang(lang) {
     });
 }
 
-/* ─── Theme ──────────────────────────────────── */
 function toggleTheme() {
     const isDark = document.body.getAttribute('data-theme') === 'dark';
     const next = isDark ? 'light' : 'dark';
@@ -154,16 +171,14 @@ function applyTheme(theme) {
     if (btn) btn.textContent = theme === 'dark' ? '◑' : '◐';
 }
 
-/* ─── Init ───────────────────────────────────── */
 (function init() {
     const savedLang = localStorage.getItem('cas-lang');
     setLang(savedLang || 'en');
 
-    const savedTheme = localStorage.getItem('cas-theme') || 'light';
+    const savedTheme = localStorage.getItem('cas-theme') || 'dark';
     applyTheme(savedTheme);
 })();
 
-/* ─── 3D Tilt на карточках ───────────────────── */
 document.querySelectorAll('.media-card').forEach((card) => {
     const frame = card.querySelector('.media-card-frame');
     let entered = false;
@@ -194,7 +209,6 @@ document.querySelectorAll('.media-card').forEach((card) => {
     });
 });
 
-/* ─── Scroll reveal ──────────────────────────── */
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
         if (e.isIntersecting) {
@@ -232,7 +246,6 @@ document.querySelectorAll('.role-bubble').forEach((el, i) => {
     observer.observe(el);
 });
 
-/* ─── Счётчики в stats ───────────────────────── */
 const counterObs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
         if (!e.isIntersecting) return;
